@@ -172,22 +172,29 @@ button.pink-btn:active {
     padding: 0;
 }
 .slide-text {
+    padding-top: 97px;
     width: 179px;
     position: absolute;
-    right: 60%;
+    right: 61%;
     top: 0;
     color: rgba(0, 0, 0, 0.7);
+}
+.slide-text p {
+    padding-top: 54px;
+    margin: 0;
+    letter-spacing: 0.32px;
+    font-weight: 300;
 }
 .slide-text h5 {
     color: #000000;
 }
 .slick-next {
     right: -430px;
-    bottom: 6%;
+    bottom: 8%;
 }
 .slick-prev {
     right: -380px;
-    bottom: 6%;
+    bottom: 8%;
 }
 
 .slick-prev:before {
