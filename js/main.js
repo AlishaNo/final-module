@@ -46,7 +46,6 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
-        dots: true,
         centerMode: true,
         variableWidth: true,
         focusOnSelect: true

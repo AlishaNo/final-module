@@ -15,7 +15,7 @@ img {
     width: 100%;
     height: auto;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
 }
@@ -29,6 +29,10 @@ h3 {
 }
 h4 {
     font-size: 32px;
+    font-weight: 400;
+}
+h5 {
+    font-size: 24px;
     font-weight: 400;
 }
 .wrapper {
@@ -148,74 +152,56 @@ button.pink-btn:active {
 }
 #catalog {
     position: relative;
+    padding-bottom: 102px;
 }
-
 #catalog .slider-for img {
-    width: 288px;
+    width: auto;
+    height: 509px;
+}
+.slider-for {
+     left: 53%;
+     bottom: -213px;
+ }
+.slider-nav {
+    width: 53%;
 }
 .slider-nav .slick-slide img {
-    width: 200px;
-    height: auto;
+    width: auto;
+    height: 213px;
     margin: 0;
     padding: 0;
 }
-.slider-nav .slick-slide  {
-    width: 150px !important;
-}
-/*
-
-#catalog .slider-nav .slick-slide img {
-
-}
-#catalog .slider-nav .slick-slide  {
-    width: 150px;
-}*/
-/*.slider-nav {
-    margin-left: 0;
-}
-.slider-nav .slick-slide {
-    max-width: 100px;
-    height: auto;
-}
-.slider-for .slick-list .slick-track .slick-slide img {
-    width: 300px;
-}
-.slider-for .slick-slide {
+.slide-text {
+    width: 179px;
     position: absolute;
-    top: 10%;
-    left: 6%;
-}*/
-/*.slick-prev:before {
-    content: "\2039";
-    color: #ffffff;
-    font-size: 28px;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #ffffff;
+    right: 60%;
+    top: 0;
+    color: rgba(0, 0, 0, 0.7);
+}
+.slide-text h5 {
+    color: #000000;
+}
+.slick-next {
+    right: -430px;
+    bottom: 6%;
+}
+.slick-prev {
+    right: -380px;
+    bottom: 6%;
+}
+
+.slick-prev:before {
+    content: url("../images/arrow-left.png");
     position: absolute;
-    right: -9px;
+    opacity: 0.85;
 }
 
 .slick-next:before {
-    content: "\203A";
-    color: #ffffff;
-    font-size: 28px;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #ffffff;
+    content: url("../images/arrow-right.png");
     position: absolute;
-}*/
-/*.slick-dots li button:before {
-    color: #ffffff;
-    margin-top: 45px;
+    opacity: 0.85;
 }
-.slick-dots li.slick-active button:before {
-    color: #ffffff;
-}*/
+
 /*.catalog-slider {*/
     /*justify-content: space-between;*/
 /*}*/
