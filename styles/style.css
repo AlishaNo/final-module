@@ -152,7 +152,7 @@ button.pink-btn:active {
 }
 .about {
     text-align: center;
-    padding: 11% 0 6%;
+    padding: 11% 1% 6%;
 }
 .about-container {
     display: grid;
@@ -414,6 +414,13 @@ footer .footer-contact span {
 /*для айпад про*/
 @media screen and (max-width: 1024px) and (min-width: 769px) {
 
+    .about-container {
+        grid-template-columns: 37% 30% 30%;
+        grid-gap: 3%;
+    }
+    .about {
+        padding: 9% 2% 5%;
+    }
     .banner {
         flex-wrap: wrap;
     }
@@ -498,7 +505,6 @@ footer .footer-contact span {
         padding-top: 6px;
         transition: 0.3s;
     }
-
 }
 
 /*для айпад */
