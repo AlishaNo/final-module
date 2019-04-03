@@ -59,7 +59,7 @@
       <div class="icon-size">
       <img src="images/icon_disigner.svg" alt="icon">
       </div>
-      <h4>Consultation of the designer</h4>
+      <h4>Designer consultation</h4>
       <p>Our designer collaborates with you first, creating original sketches, and throughout the process to achieve the perfect result.</p>
     </div>
     <div class="about-item">
@@ -85,12 +85,13 @@
   <div class="banner-text">
     <img class="flower" src="images/flower5.png" alt="">
     <h2>Choose us</h2>
-    <p>Our masters with love create very unique and incredible bridal gowns, graduation and evening dresses for you. Each fitting allows you to stylize the dress, make it perfect.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     <button class="pink-btn" type="button">Order</button>
   </div>
 </section>
 <section class="gallery catalog" id="catalog">
   <h2>Gallery</h2>
+  <img class="flower" src="images/flower3.png" alt="">
   <div class="catalog-slider slider-for">
     <div class="slider-content">
       <img src="images/photo_big.png" alt="photo">
@@ -167,26 +168,39 @@
   <h3>Order your dress with us</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. </p>
   <form class="order-form" method="post" target="#">
-      <label>Name<br>
+    <div class="input-row input-name">
+      <label>Name
         <input type="text" name="name" placeholder="Name" required>
        </label>
-    <label>Surname<br>
+    </div>
+    <div class="input-row input-surname">
+    <label>Surname
       <input type="text" name="surname" placeholder="Surname">
     </label>
-    <label>Email<br>
+    </div>
+    <div class="input-row input-hide">
+    <label>Email
         <input type="email" name="email" placeholder="Email">
     </label>
-    <label>Phone number<br>
+    </div>
+    <div class="input-row input-phone">
+    <label>Phone number
         <input type="number" name="phone" placeholder="+380" required>
     </label>
-    <label>Link on the dress<br>
+    </div>
+    <div class="input-row input-hide">
+    <label>Link on the dress
       <input type="url" name="link" placeholder="http:">
     </label>
-    <label>Upload a photo<br>
-      <input type="file" name="upload" accept=".png, .jpg, .jpeg" placeholder="Upload a photo">
+    </div>
+    <div class="input-row input-hide">
+      <label for="upload-input">Upload a photo</label>
+      <label class="file-upload-box">Upload a photo
+      <input type="file" id="upload-input" name="upload" accept=".png, .jpg, .jpeg" placeholder="Upload a photo">
     </label>
+    </div>
     <div class="grid-block-big">
-    <label>Comment<br>
+    <label class="input-hide">Comment
         <textarea name="comment-body" placeholder="Comment"></textarea>
     </label>
         <button class="pink-btn" type="submit">Send</button>
@@ -208,7 +222,7 @@
   </div>
 </section>
 <footer>
-  <a href="/"><h4>ZORKA</h4></a>
+  <a class="footer-logo" href="/"><h4>ZORKA</h4></a>
   <nav>
     <h6>Navigation</h6>
     <ul class="footer-menu">

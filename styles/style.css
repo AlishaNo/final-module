@@ -61,9 +61,13 @@ header .mobile-menu-container {
 .main-menu {
      display: flex;
      justify-content: space-between;
+    align-items: center;
 }
 nav a {
     display: block;
+}
+nav a:hover {
+    border-top: 2px solid #ce7cb2;
 }
 ul.menu {
     list-style: none;
@@ -77,6 +81,7 @@ ul.menu li {
 }
 ul.menu li img {
     width: 35px;
+    vertical-align: middle;
 }
 body.modal-opened {
     overflow: hidden;
@@ -91,26 +96,38 @@ body.modal-opened {
 .flower {
     position: absolute;
     width: 300px;
+}
+.home .banner-text .flower {
     right: -26%;
     top: 20%;
 }
+.choose-us .banner-text .flower{
+    right: -23%;
+    bottom: -13%;
+}
 .flower-left {
     left: -2%;
-    top: 71%;
+    bottom: -10%;
 }
 .flower-right {
-    left: 79%;
-    top: 71%;
+    right: -2%;
+    bottom: -10%;
 }
 .banner-text {
     max-width: 60%;
     position: relative;
-    padding: 127px 127px 46px 40px;
+   /* padding: 127px 127px 46px 40px;*/
+    padding: 7% 7% 0 2%;
 }
 .banner-text p {
-    max-width: 340px;
     color: #4c4c4c;
+    max-width: 340px;
+    letter-spacing: 0.32px;
 }
+.banner-text h2 {
+    width: 340px;
+}
+
 .clear-img {
     font-size: 0;
 }
@@ -135,10 +152,7 @@ button.pink-btn:active {
 }
 .about {
     text-align: center;
-    padding: 100px 104px 70px;
-}
-#choose-us .flower {
-    top: 47%;
+    padding: 11% 0 6%;
 }
 .about-container {
     display: grid;
@@ -163,16 +177,29 @@ button.pink-btn:active {
     position: relative;
     padding-bottom: 102px;
 }
+#catalog h2 {
+    position: relative;
+    top: 196px;
+    left: 177px;
+}
+#catalog .flower {
+    top: 79px;
+    left: -117px;
+    width: 358px;
+    z-index: 10;
+}
 #catalog .slider-for img {
     width: auto;
     height: 509px;
 }
 .slider-for {
      left: 53%;
-     bottom: -213px;
  }
 .slider-nav {
     width: 53%;
+    /*top: -213px;*/
+    bottom: 102px;
+    position: absolute;
 }
 .slider-nav .slick-slide img {
     width: auto;
@@ -184,7 +211,7 @@ button.pink-btn:active {
     padding-top: 97px;
     width: 179px;
     position: absolute;
-    right: 61%;
+    left: 26%;
     top: 0;
     color: rgba(0, 0, 0, 0.7);
 }
@@ -235,33 +262,41 @@ button.pink-btn:active {
 }
 .order p {
     font-size: 18px;
+    max-width: 97%;
 }
 .order-form {
     display: grid;
-    grid-template-columns: 50% 50%;
     margin: auto;
-
+    align-items: end;
+    grid-template-columns: 46% 45%;
+    grid-gap: 15px;
+    justify-content: center;
+}
+.order-form input[type="text"] {
+    grid-area: inputAreaName;
+}
+.order-form input[type="number"] {
+    grid-area: inputAreaPhone;
 }
 .order-form label {
 text-align: left;
+    display: block;
 }
 .order-form input,
-.order-form textarea {
-    padding: 12px 0 12px 12px;
+.order-form textarea,
+.input-row label.file-upload-box {
+    padding: 14px 0 13px 12px;
     margin-top: 6px;
-    width: 370px;
+    width: 100%;
+    /*width: 370px;*/
     color: #665566;
     background-color: #ffffff;
     border: none;
     border-radius: 5px;
     outline: none;
     transition: 0.5s;
-    margin-bottom: 15px;
+/*    margin-bottom: 15px;*/
     font-size: 15px;
-}
-
-.order-form input[type="file"] {
-
 }
 
 .order .order-form textarea {
@@ -286,8 +321,16 @@ text-align: left;
     display: grid;
     max-width: 768px;
 }
+.input-row label.file-upload-box {
+    background: #ffffff url("../images/plus.png") 96% 50% no-repeat;
+    height: 47px;
+    color: rgba(113, 111, 111, 0.5);
+}
+.input-row label.file-upload-box input#upload-input {
+    display: none;
+}
 .contact-us {
-    padding: 61px 174px;
+    padding: 5% 4%;
     display: grid;
     grid-gap: 5%;
     grid-template-columns: 45% 50%;
@@ -306,7 +349,7 @@ footer {
     color: #ffffff;
     display: grid;
     grid-template-columns: 20% 20% 40% 20%;
-    padding: 13px 273px 33px 124px;
+    padding: 1% 15% 5% 10%;
 }
 footer a {
     color: #ffffff;
@@ -352,12 +395,58 @@ footer .footer-contact span {
 }
 
 @media screen and (max-width: 1202px) {
-    .wrapper {
-        max-width: 100%;
+    header {
+        padding: 3% 8%;
+    }
+    ul.menu li {
+        font-size: 19px;
+    }
+    .banner h2 {
+        font-size: 64px;
+    }
+    .banner p {
+        font-size: 12px;
+    }
+    .flower {
+        width: 240px;
     }
 }
-@media screen and (max-width: 1024px) {
+/*для айпад про*/
+@media screen and (max-width: 1024px) and (min-width: 769px) {
 
+    .banner {
+        flex-wrap: wrap;
+    }
+    .banner .banner-text h2,
+    .banner .banner-text p {
+        width: 100%;
+        max-width: 800px;
+    }
+    .banner-text {
+        max-width: 900px;
+        padding: 1% 6% 1% 2%;
+    }
+    .banner-text button {
+        position: absolute;
+        top: 23%;
+        right: 8%;
+    }
+    .contact-info {
+        max-width: 100%;
+    }
+    .contact-info h3 {
+        font-size: 56px;
+    }
+    .contact-info p {
+        font-size: 12px;
+    }
+    footer {
+        grid-template-columns: 20% 20% 35% 25%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
     header .menu {
         display: none;
     }
@@ -374,42 +463,131 @@ footer .footer-contact span {
         z-index: 3;
         width: 25px;
     }
-header .mobile-menu {
-    display: block;
-    position: fixed;
-    list-style:none;
-    padding: 20px 10px;
-    width: 250px;
-    background-color: #eee;
-    height: 100%;
-    top: -17px;
-    right: -450px;
-    transition: right .2s;
-    z-index: 2;
+    header .mobile-menu {
+        display: block;
+        position: fixed;
+        list-style:none;
+        padding: 20px 10px;
+        width: 250px;
+        background-color: #eee;
+        height: 100%;
+        top: -17px;
+        right: -450px;
+        transition: right .2s;
+        z-index: 2;
+    }
+
+    header .mobile-menu-container input:checked ~ label {
+        left: 160px;
+    }
+    header .mobile-menu-container input:checked ~ .mobile-menu {
+        right: 0;
+    }
+    .mobile-menu-container li {
+        text-transform: uppercase;
+        padding: 10px 0 10px 20px;
+    }
+    .mobile-menu-container li a {
+        color: #000000;
+        font-weight: bold;
+    }
+    .mobile-menu-container li a:hover {
+        border-top: 2px solid #ff6033;
+    }
+    .mobile-menu-container li a {
+        padding-top: 6px;
+        transition: 0.3s;
+    }
+
 }
 
-header .mobile-menu-container input:checked ~ label {
-    left: 160px;
-}
-header .mobile-menu-container input:checked ~ .mobile-menu {
-    right: 0;
-}
-.mobile-menu-container li {
-    text-transform: uppercase;
-    padding: 10px 0 10px 20px;
-}
-.mobile-menu-container li a {
-    color: #000000;
-    font-weight: bold;
-}
-.mobile-menu-container li a:hover {
-    border-top: 2px solid #ff6033;
-}
-.mobile-menu-container li a {
-    padding-top: 6px;
-    transition: 0.3s;
-}
+/*для айпад */
+@media screen and (max-width: 768px) {
+
+    .order-form input {
+        display: block;
+    }
+    .order-form {
+        grid-template-columns: 80%;
+        grid-template-rows: repeat(auto-fill, minmax(50px, 70px));
+        justify-content: center;
+
+    }
+   /* .input-row {
+        margin: 0 auto;
+    }*/
+    .order .order-form .input-hide {
+        display: none;
+    }
+    .mini-wrap {
+        padding-right: 3%;
+        padding-left: 3% ;
+    }
+    .about-container {
+        grid-template-columns: 75%;
+        grid-template-rows: 30% 30% 30%;
+    }
+    .banner .clear-img img{
+        display: none;
+    }
+    .home {
+        background: url("../images/photo_header.png") no-repeat 50% 50%;
+        background-size: cover;
+    }
+    .choose-us {
+        background: url("../images/photo_section.png") no-repeat 50% 50%;
+        background-size: cover;
+    }
+    .banner .banner-text {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding-bottom: 2%;
+    }
+    #home .banner-text .flower,
+    #choose-us .banner-text .flower {
+        display: none;
+    }
+
+    .contact-info h3 {
+        font-size: 26px;
+    }
+    .contact-info p {
+        font-size: 10px;
+    }
+    .order h3 {
+        font-size: 36px;
+        padding-bottom: 6%;
+    }
+    .order p {
+        display: none;
+    }
+    .order .flower {
+        width: 150px;
+    }
+    footer {
+        grid-template-columns: 25% 35% 35%;
+        padding: 2% 2%;
+    }
+    footer nav {
+        display: none;
+    }
+    footer .footer-logo h4 {
+        font-size: 24px;
+    }
 
 }
+/*для айфонХ */
+@media screen and (max-width: 375px) {}
+/*для айфон 8 про*/
+@media screen and (max-width: 414px) {
+    footer {
+        grid-template-columns: 45% 45%;
+        padding: 2% 2%;
+    }
+    footer .footer-logo {
+        display: none;
+    }
+
+}
+
 
 
